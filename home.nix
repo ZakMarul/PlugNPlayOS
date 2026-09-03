@@ -11,24 +11,38 @@
 
   # Home user packages
   home.packages = with pkgs; [
+    #---Terminal Utilities---
+    yazi
     btop
     htop
+    #---Core Pkgs---
     neovim
-    lua
-    python3
-    fastfetch
-    fzf
-    onlyoffice-desktopeditors
     git
+    fzf
+    #---Developer tools and packages---
+    lua
+    luajit
+    python3
+    #---Full Applications---
+    onlyoffice-desktopeditors
     inkscape
-    catppuccin-kde
     blender
+    #---Aesthetics---
+    cmatrix
+    fastfetch
+    #---Desktop Environment
+    catppuccin-kde
   ];
 
 
   # Home user session variables
   home.sessionVariables = {
     TERMINAL = "kitty";
+    EDITOR = "nvim";
+    PAGER = "less";
+    MOZ_ENABLE_WAYLAND = "1";
+    SDL_VIDEODRIVER = "wayland";
+    BROWSER = "firefox";
   };
 
 
