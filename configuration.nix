@@ -58,6 +58,9 @@
     extraGroups = [ "wheel","networkmanager","audio" ];
     hashedPassword = "$6$Ikx81SqLD09T/lex$Z1b39iorman4KbSmmn.eVrFTso7EHT4BGuCkT.Xxk42xhLduN7nNLGfkTQJx.10R7c75iCQEqqk7BEn5a3pO.0";
   };
+  systemd.tmpfiles.rules = [
+    "Z /etc/nixos        0755   marul     users     -"
+  ];
 
   #System packages
   programs.firefox.enable = true;
