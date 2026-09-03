@@ -76,8 +76,8 @@
     };
 
     shellAliases = {
-    "nix-sysbuild" = "cd /etc/nixos && sudo nixos-rebuild switch --flake .#nixos";
-    "nix-resync" = "cd /etc/nixos && sudo nix flake update";
+    "nixos-sysbuild" = "cd /etc/nixos && sudo nixos-rebuild switch --flake .#nixos";
+    "nixos-resync" = "cd /etc/nixos && sudo nix flake update";
     };
 
     initContent = ''
@@ -126,33 +126,6 @@
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
         };
       };
-    };
-  };
-
-
-  #Plasma configuration
-  programs.plasma = {
-    enable = true;
-
-    workspace = {
-      lookAndFeel = "Catppuccin-Frappe-Blue";
-      iconTheme = "breeze-dark";
-      cursor.theme = "breeze_cursors";
-      wallpaper = pkgs.fetchurl {
-        url = "https://w.wallhaven.cc/full/k8/wallhaven-k898gq.jpg";
-        sha256 = "sha256-BjREdU8AqHatcnVdpGE09kPrQTTt1mIagiHfLRSxPVw=";
-      };
-    };
-
-    configFile = {
-      "kdeglobals"."General"."TerminalApplication" = "kitty";
-      "kdeglobals"."General"."TerminalService" = "org.kde.kitty.desktop";
-      "kdeglobals"."Applications"."TerminalApplication" = "kitty";
-      "kdeglobals"."Applications"."TerminalService" = "org.kde.kitty.desktop";
-      "ksplashrc"."KSplash"."Theme" = "catppuccin-frappe-blue";
-      "kdeglobals"."KDE"."widgetStyle" = "Breeze";
-      "kwinrc"."org.kde.kdecoration2"."library" = "org.kde.breeze";
-      "kwinrc"."org.kde.kdecoration2"."theme" = "Breeze";
     };
   };
 
