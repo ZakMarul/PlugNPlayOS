@@ -24,7 +24,6 @@
     tmux
     #---Developer tools and packages---
     lua
-    luajit
     python3
     #---Full Applications---
     onlyoffice-desktopeditors
