@@ -30,8 +30,7 @@ hl.monitor({
 -- Set programs that you use
 local terminal    = "kitty"
 local fileManager = "kdePackages.dolphin"
-local menu        = "hyprlauncher"
-
+local menu = "pkill -x rofi || rofi -show drun"
 
 -------------------
 ---- AUTOSTART ----
