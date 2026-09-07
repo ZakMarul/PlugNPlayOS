@@ -20,7 +20,7 @@
     neovim
     git
     fzf
-    thunar
+    kdePackages.dolphin
     tmux
     #---Developer tools and packages---
     lua
@@ -29,6 +29,8 @@
     onlyoffice-desktopeditors
     inkscape
     blender
+    zed-editor
+    audacity
     localsend
     #---Aesthetics---
     cmatrix
