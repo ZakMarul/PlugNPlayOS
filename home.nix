@@ -21,6 +21,7 @@
     git
     fzf
     kdePackages.dolphin
+    rofi
     tmux
     #---Developer tools and packages---
     lua
