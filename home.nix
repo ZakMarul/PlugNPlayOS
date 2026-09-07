@@ -74,7 +74,7 @@
     enable = true;
     enableZshIntegration = true;
   };
-  xdg.configFile."starship.toml".source = ./conf/starship.toml;
+  xdg.configFile."starship.toml".source = ./conf/starship/starship.toml;
 
   # Zsh configuration
   programs.zsh = {
@@ -100,13 +100,23 @@
 
     initContent = ''
       # Pametno traženje kroz povijest sa strelicama gore/dolje
-
       autoload -U up-line-or-beginning-search
       autoload -U down-line-or-beginning-search
       zle -N up-line-or-beginning-search
       zle -N down-line-or-beginning-search
       bindkey "^[[A" up-line-or-beginning-search
       bindkey "^[[B" down-line-or-beginning-search
+
+      # Box kursor
+      _set_box_cursor() {
+        echo -ne '\e[2 q'
+    }
+    precmd_funkcions+=(_set_box_cursor)
+    zle-line-init() {
+        _set_box_cursor
+    }
+    zle -N zle-line-init
+
 
       alias ls="eza --group-directories-first"
       alias ll="eza -l -g --icons --git --group-directories-first"
