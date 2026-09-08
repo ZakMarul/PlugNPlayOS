@@ -20,6 +20,7 @@
     neovim
     git
     fzf
+    zsh
     kdePackages.dolphin
     rofi
     tmux
@@ -49,6 +50,7 @@
     MOZ_ENABLE_WAYLAND = "1";
     SDL_VIDEODRIVER = "wayland";
     BROWSER = "firefox";
+    ZDOTDIR = "${config.home.homeDirectory}/.config/zsh";
   };
 
   # Font configuration
@@ -80,11 +82,7 @@
   xdg.configFile."zsh/.zshrc".source = ./conf/zsh/.zshrc;
   xdg.configFile."zsh/.zprofile".source = ./conf/zsh/.zprofile;
 
-  home.sessionVariables = {
-    ZDOTDIR = "${config.home.homeDirectory}/.config/zsh";
-  };
-
-  #Firefox configuration
+#Firefox configuration
   programs.firefox = {
     enable = true;
     profiles = {
