@@ -36,6 +36,7 @@
     #---Aesthetics---
     cmatrix
     fastfetch
+    awww
     #---Misc---
     nerd-fonts.jetbrains-mono
   ];
@@ -59,6 +60,9 @@
     source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/conf/hyprland";
     recursive = true;
   };
+
+  # Awww configuration
+  xdg.configFile."hypr/wallpaper.png".source = ./conf/wallpapers/wallpaper.png;
 
   # Kitty configuration
   programs.kitty = {
