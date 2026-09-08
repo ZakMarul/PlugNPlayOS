@@ -18,7 +18,7 @@
   };
   };
 
-  outputs = { self, nixpkgs, home-manager, chaotic, ... }: {
+  outputs = { self, nixpkgs, home-manager, chaotic, firefox-addons, ... }@inputs: {
     nixosConfigurations.pnp = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
