@@ -126,13 +126,11 @@
     '';
   };
 
-  #Firefox configuration
+# Firefox configuration
   programs.firefox = {
     enable = true;
     profiles = {
-      myprofile = {
-        id = 0;
-        name = "Default Profile";
+      default = {
         isDefault = true;
         settings = {
           "browser.startup.homepage" = "https://nixos.org";
@@ -148,14 +146,9 @@
             };
           };
         };
-      };
-    };
-    policies = {
-      ExtensionSettings = {
-        "uBlock0@raymondhill.net" = {
-          installation_mode = "force_installed";
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
-        };
+        extensions.packages = with pkgs.firefox-addons; [
+          ublock-origin
+        ];
       };
     };
   };
