@@ -31,14 +31,17 @@
     onlyoffice-desktopeditors
     inkscape
     blender
+    steam
     zed-editor
     audacity
     localsend
+    vlc
     #---Aesthetics---
     cmatrix
     fastfetch
     awww
     #---Misc---
+    gamescope
     nerd-fonts.jetbrains-mono
   ];
 

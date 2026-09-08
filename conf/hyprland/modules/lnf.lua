@@ -5,10 +5,10 @@
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
-        gaps_in  = 5,
-        gaps_out = 16,
+        gaps_in  = 2,
+        gaps_out = 10,
 
-        border_size = 3,
+        border_size = 2,
 
         col = {
             active_border   = { colors = {"rgba(a6da95ff)", "rgba(8aadf4ff)"}, angle = 45 },
@@ -29,7 +29,7 @@ hl.config({
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1.0,
-        inactive_opacity = 1.0,
+        inactive_opacity = 0.85,
 
         shadow = {
             enabled      = false,
