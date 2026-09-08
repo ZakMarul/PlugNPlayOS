@@ -134,6 +134,7 @@ programs.firefox = {
       isDefault = true;
       settings = {
         "browser.startup.homepage" = "https://nixos.org";
+        "extensions.autoDisableScopes" = 0;
       };
       search = {
         force = true;
@@ -149,6 +150,7 @@ programs.firefox = {
 
       extensions.packages = [
         inputs.firefox-addons.packages.${pkgs.system}.ublock-origin
+        inputs.firefox-addons.packages.${pkgs.system}.catppuccin-mocha-mauve
       ];
     };
   };
