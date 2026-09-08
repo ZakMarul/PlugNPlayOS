@@ -11,6 +11,11 @@
 
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     chaotic.inputs.nixpkgs.follows = "nixpkgs";
+
+  firefox-addons = {
+    url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
   };
 
   outputs = { self, nixpkgs, home-manager, chaotic, ... }: {
@@ -25,6 +30,7 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             users.marul = import ./home.nix;
+            extraSpecialArgs = { inherit inputs; };
             backupFileExtension = "backup";
           };
         }

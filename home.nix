@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 
 {
@@ -127,31 +127,32 @@
   };
 
 # Firefox configuration
-  programs.firefox = {
-    enable = true;
-    profiles = {
-      default = {
-        isDefault = true;
-        settings = {
-          "browser.startup.homepage" = "https://nixos.org";
-        };
-        search = {
-          force = true;
-          default = "DuckDuckGo";
-          privateDefault = "DuckDuckGo";
-          engines = {
-            "DuckDuckGo" = {
-              urls = [{ template = "https://duckduckgo.com/?q={searchTerms}"; }];
-              definedAliases = [ "@ddg" ];
-            };
+programs.firefox = {
+  enable = true;
+  profiles = {
+    default = {
+      isDefault = true;
+      settings = {
+        "browser.startup.homepage" = "https://nixos.org";
+      };
+      search = {
+        force = true;
+        default = "DuckDuckGo";
+        privateDefault = "DuckDuckGo";
+        engines = {
+          "DuckDuckGo" = {
+            urls = [{ template = "https://duckduckgo.com/?q={searchTerms}"; }];
+            definedAliases = [ "@ddg" ];
           };
         };
-        extensions.packages = with pkgs.firefox-addons; [
-          ublock-origin
-        ];
       };
+
+      extensions.packages = [
+        inputs.firefox-addons.packages.${pkgs.system}.ublock-origin
+      ];
     };
   };
+};
 
   programs.home-manager.enable = true;
 }
