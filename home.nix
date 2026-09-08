@@ -23,6 +23,7 @@
     kdePackages.dolphin
     rofi
     tmux
+    kitty
     #---Developer tools and packages---
     lua
     python3
@@ -62,12 +63,9 @@
   };
 
   # Awww configuration
-  xdg.configFile."hypr/wallpaper.png".source = ./conf/wallpapers/wallpaper.png;
+  xdg.configFile."wallpaper.png".source = ./conf/wallpapers/wallpaper.png;
 
   # Kitty configuration
-  programs.kitty = {
-    enable = true;
-  };
   xdg.configFile."kitty" = {
     source = ./conf/kitty;
     recursive = true;
@@ -115,7 +113,7 @@
       _set_box_cursor() {
         echo -ne '\e[2 q'
     }
-    precmd_funkcions+=(_set_box_cursor)
+    precmd_funcions+=(_set_box_cursor)
     zle-line-init() {
         _set_box_cursor
     }
