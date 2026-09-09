@@ -20,7 +20,7 @@
     neovim
     git
     fzf
-    kdePackages.dolphin
+    nautilus
     rofi
     tmux
     kitty
@@ -66,7 +66,7 @@
   };
 
   # Awww configuration
-  xdg.configFile."wallpaper.png".source = ./conf/wallpapers/wallpaper.png;
+  xdg.configFile."wallpaper2.png".source = ./conf/wallpapers/wallpaper2.png;
 
   # Kitty configuration
   xdg.configFile."kitty" = {

@@ -9,5 +9,5 @@
 --
 hl.on("hyprland.start", function ()
     hl.exec_cmd("awww-daemon &")
-    hl.exec_cmd("sleep 0.5 && awww img ~/.config/wallpaper.png")
+    hl.exec_cmd("sleep 0.5 && awww img ~/.config/wallpaper2.png")
     end)

@@ -4,7 +4,7 @@
 
 -- Set programs that you use
 local terminal    = "kitty"
-local fileManager = "kdePackages.dolphin"
+local fileManager = "nautilus"
 local menu = "pkill -x rofi || rofi -show drun"
 
 ---------------------
