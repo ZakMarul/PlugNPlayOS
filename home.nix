@@ -66,7 +66,7 @@
   };
 
   # Awww configuration
-  xdg.configFile."wallpaper2.png".source = ./conf/wallpapers/wallpaper2.png;
+  xdg.configFile."wallpaper3.png".source = ./conf/wallpapers/wallpaper3.png;
 
   # Kitty configuration
   xdg.configFile."kitty" = {
