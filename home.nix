@@ -80,7 +80,15 @@
     enableZshIntegration = true;
   };
   xdg.configFile."starship.toml".source = ./conf/starship/starship.toml;
-
+  
+  # Cursor configuration
+  home.pointerCursor = {
+    enable = true;
+    name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
+    size = 24;
+  };
+ 
   # Zsh configuration
   programs.zsh = {
     enable = true;
