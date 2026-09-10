@@ -80,7 +80,7 @@
     enableZshIntegration = true;
   };
   xdg.configFile."starship.toml".source = ./conf/starship/starship.toml;
-  
+
   # Cursor configuration
   home.pointerCursor = {
     enable = true;
@@ -88,7 +88,7 @@
     package = pkgs.bibata-cursors;
     size = 24;
   };
- 
+
   # Zsh configuration
   programs.zsh = {
     enable = true;
@@ -119,17 +119,6 @@
       zle -N down-line-or-beginning-search
       bindkey "^[[A" up-line-or-beginning-search
       bindkey "^[[B" down-line-or-beginning-search
-
-      # Box kursor
-      _set_box_cursor() {
-        echo -ne '\e[2 q'
-    }
-    precmd_funcions+=(_set_box_cursor)
-    zle-line-init() {
-        _set_box_cursor
-    }
-    zle -N zle-line-init
-
 
       alias ls="eza --group-directories-first"
       alias ll="eza -l -g --icons --git --group-directories-first"

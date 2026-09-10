@@ -19,6 +19,14 @@
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
+-- Floating decorations
+hl.window_rule({
+    match = { float = true },
+    border_color = "rgb(ff5555)",
+    rounding = 16,
+    rounding_power = 2,
+    border_size = 3,
+})
 
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
