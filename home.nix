@@ -34,6 +34,7 @@
     steam
     zed-editor
     audacity
+    vesktop
     localsend
     vlc
     #---Aesthetics---
