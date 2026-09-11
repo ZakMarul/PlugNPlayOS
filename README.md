@@ -1,3 +1,4 @@
 # PlugNPlayOS
 ___
-- Personal home pc nix configuration for dev, gaming, etc.
+- Personal nixos configuration for my main laptop mashine.
+- General use desktop nixos configuration for one home user.
