@@ -79,6 +79,14 @@
     recursive = true;
   };
 
+  # Btop configuration
+  xdg.configFile."btop/btop.conf" = {
+    source = ./conf/btop/btop.conf;
+  };
+  xdg.configFile."btop/themes/catppuccin-mac.theme" = {
+    source = ./conf/btop/themes/catppuccin-mac.theme;
+  };
+
   # Starship prompt configuration
   programs.starship = {
     enable = true;
