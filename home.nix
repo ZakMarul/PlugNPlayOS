@@ -8,6 +8,10 @@
   home.homeDirectory = "/home/marul";
   home.stateVersion = "26.05";
 
+  imports = [
+    ./conf-nix/zsh.nix
+    ./conf-nix/firefox.nix
+  ];
 
   # Home user packages
   home.packages = with pkgs; [
@@ -89,75 +93,6 @@
     package = pkgs.bibata-cursors;
     size = 24;
   };
-
-  # Zsh configuration
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-
-    history = {
-      size = 10000;
-      path = "${config.home.homeDirectory}/.zsh_history";
-      ignoreDups = true;
-      share = true;
-      extended = true;
-    };
-
-    profileExtra = ''
-      if uwsm check may-start; then
-        exec uwsm start hyprland.desktop
-      fi
-    '';
-
-
-    initContent = ''
-      # Pametno traženje kroz povijest sa strelicama gore/dolje
-      autoload -U up-line-or-beginning-search
-      autoload -U down-line-or-beginning-search
-      zle -N up-line-or-beginning-search
-      zle -N down-line-or-beginning-search
-      bindkey "^[[A" up-line-or-beginning-search
-      bindkey "^[[B" down-line-or-beginning-search
-
-      alias ls="eza --group-directories-first"
-      alias ll="eza -l -g --icons --git --group-directories-first"
-      alias la="eza -la -g --icons --git --group-directories-first"
-      alias lt="eza --tree --level=2 --icons --group-directories-first"
-
-    '';
-  };
-
-# Firefox configuration
-programs.firefox = {
-  enable = true;
-  profiles = {
-    default = {
-      isDefault = true;
-      settings = {
-        "browser.startup.homepage" = "https://nixos.org";
-        "extensions.autoDisableScopes" = 0;
-      };
-      search = {
-        force = true;
-        default = "DuckDuckGo";
-        privateDefault = "DuckDuckGo";
-        engines = {
-          "DuckDuckGo" = {
-            urls = [{ template = "https://duckduckgo.com/?q={searchTerms}"; }];
-            definedAliases = [ "@ddg" ];
-          };
-        };
-      };
-
-      extensions.packages = [
-        inputs.firefox-addons.packages.${pkgs.system}.ublock-origin
-        inputs.firefox-addons.packages.${pkgs.system}.catppuccin-mocha-mauve
-      ];
-    };
-  };
-};
 
   programs.home-manager.enable = true;
 }
