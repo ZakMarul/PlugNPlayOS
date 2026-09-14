@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../../global_home/home.nix
+    ../../../global_home/home.nix
   ];
 
 }
