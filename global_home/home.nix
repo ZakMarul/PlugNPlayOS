@@ -41,6 +41,7 @@
     vesktop
     localsend
     vlc
+    marktext
     #---Aesthetics---
     cmatrix
     fastfetch
