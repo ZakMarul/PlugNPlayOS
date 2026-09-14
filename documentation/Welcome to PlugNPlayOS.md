@@ -16,6 +16,4 @@ ___
 
 - **main logo** :
 
-![logo](/etc/nixos/documentation/plugnplay-logo-final.svg)
-
-
+![logo](./plugnplay-logo-final.svg)
