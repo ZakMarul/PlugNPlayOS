@@ -22,6 +22,6 @@ end
 
 if hostname == "pnp_desktop_AMD" then
     require("monitors")
-else if hostname == "pnp_laptop_nvidia" then
+elseif hostname == "pnp_laptop_nvidia" then
     require("monitors")
 end
