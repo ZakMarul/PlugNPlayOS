@@ -9,8 +9,8 @@
   home.stateVersion = "26.05";
 
   imports = [
-    ./home/conf-nix/zsh.nix
-    ./home/conf-nix/firefox.nix
+    ./conf-nix/zsh.nix
+    ./conf-nix/firefox.nix
   ];
 
   # Home user packages
