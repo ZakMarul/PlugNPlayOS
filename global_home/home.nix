@@ -9,8 +9,8 @@
   home.stateVersion = "26.05";
 
   imports = [
-    ./conf-nix/zsh.nix
-    ./conf-nix/firefox.nix
+    ./home/conf-nix/zsh.nix
+    ./home/conf-nix/firefox.nix
   ];
 
   # Home user packages
@@ -71,7 +71,7 @@
   };
 
   # Awww configuration
-  xdg.configFile."wallpaper3.png".source = ./conf/wallpapers/wallpaper3.png;
+  xdg.configFile."wallpaper3.png".source = ./home/conf/wallpapers/wallpaper3.png;
 
   # Kitty configuration
   xdg.configFile."kitty" = {
@@ -81,10 +81,10 @@
 
   # Btop configuration
   xdg.configFile."btop/btop.conf" = {
-    source = ./conf/btop/btop.conf;
+    source = ./home/conf/btop/btop.conf;
   };
   xdg.configFile."btop/themes/catppuccin-mac.theme" = {
-    source = ./conf/btop/themes/catppuccin-mac.theme;
+    source = ./home/conf/btop/themes/catppuccin-mac.theme;
   };
 
   # Starship prompt configuration
@@ -92,7 +92,7 @@
     enable = true;
     enableZshIntegration = true;
   };
-  xdg.configFile."starship.toml".source = ./conf/starship/starship.toml;
+  xdg.configFile."starship.toml".source = ./home/conf/starship/starship.toml;
 
   # Cursor configuration
   home.pointerCursor = {

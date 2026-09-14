@@ -15,3 +15,13 @@ require("modules.winrules")
 require("modules.layout")
 require("modules.misc")
 require("modules.input")
+
+if hostname == "pnp_laptop_nvidia" then
+    require("env_nvidia")
+end
+
+if hostname == "pnp_desktop_AMD" then
+    require("monitors")
+else if hostname == "pnp_laptop_nvidia" then
+    require("monitors")
+end

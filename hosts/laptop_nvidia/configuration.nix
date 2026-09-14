@@ -51,7 +51,7 @@
   services.getty.autologinUser = "marul";
 
   # Networking
-  networking.hostName = "pnp";
+  networking.hostName = "pnp_laptop_nvidia";
   networking.networkmanager.enable = true;
   networking.firewall.enable = true;
   programs.localsend = {
