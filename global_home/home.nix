@@ -41,6 +41,7 @@
     vesktop
     localsend
     vlc
+    obsidian
     marktext
     #---Aesthetics---
     cmatrix
