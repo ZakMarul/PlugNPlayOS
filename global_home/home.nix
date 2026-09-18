@@ -42,7 +42,6 @@
     localsend
     vlc
     obsidian
-    marktext
     #---Aesthetics---
     cmatrix
     fastfetch
