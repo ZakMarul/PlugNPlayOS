@@ -34,7 +34,7 @@ disabled = false
 style = "bg:red fg:crust"
 
 [os.symbols]
-NixOS = "󱄅"
+NixOS = ""
 Windows = ""
 Ubuntu = "󰕈"
 SUSE = ""
