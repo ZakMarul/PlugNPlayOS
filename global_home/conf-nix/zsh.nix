@@ -23,7 +23,6 @@
       fi
     '';
 
-
     initContent = ''
       # Pametno traženje kroz povijest sa strelicama gore/dolje
       autoload -U up-line-or-beginning-search
@@ -32,7 +31,9 @@
       zle -N down-line-or-beginning-search
       bindkey "^[[A" up-line-or-beginning-search
       bindkey "^[[B" down-line-or-beginning-search
-
+      bindkey -v
+      KEYTIMEOUT=1
+      alias c="clear"
       alias ls="eza --group-directories-first"
       alias ll="eza -l -g --icons --git --group-directories-first"
       alias la="eza -la -g --icons --git --group-directories-first"

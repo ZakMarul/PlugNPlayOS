@@ -2,7 +2,6 @@
 
 {
   #Firefox
-
   programs.firefox = {
   enable = true;
   profiles = {
@@ -11,6 +10,7 @@
       settings = {
         "browser.startup.homepage" = "https://nixos.org";
         "extensions.autoDisableScopes" = 0;
+        "ui.systemUsesDarkTheme" = 1;
       };
       search = {
         force = true;
@@ -26,7 +26,7 @@
 
       extensions.packages = [
         inputs.firefox-addons.packages.${pkgs.system}.ublock-origin
-        inputs.firefox-addons.packages.${pkgs.system}.catppuccin-mocha-mauve
+        inputs.firefox-addons.packages.${pkgs.system}.vimium
       ];
     };
   };
