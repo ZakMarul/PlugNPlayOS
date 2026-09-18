@@ -9,14 +9,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    #Chaotic nyx flake
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     chaotic.inputs.nixpkgs.follows = "nixpkgs";
 
+    #Firefox external flake
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    #Obsidian flake
     obsidian-extensions = {
       url = "github:karaolidis/nix-obsidian-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,7 +29,7 @@
   outputs = { self, nixpkgs, home-manager, chaotic, firefox-addons, ... }@inputs: {
     nixosConfigurations = {
 
-      # AMD Desktop sustav
+      #AMD Desktop sustav
       pnp_desktop_AMD = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [

@@ -1,23 +1,23 @@
 { config, lib, pkgs, ... }:
 
 {
-  # Imports
+  #Imports
   imports =
     [
       ./hardware-configuration.nix
     ];
 
-  # Propriatary
+  #Propriatary
   nixpkgs.config.allowUnfree = true;
 
-  # General
+  #General
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "26.05";
 
-  # Graphics
+  #Graphics
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  # ZSwap
+  #ZSwap
   zramSwap = {
     enable = true;
     algorithm = "zstd";
@@ -43,22 +43,22 @@
     };
   };
 
-  # Kernel
+  #Kernel
   boot.kernelPackages = pkgs.linuxPackages_cachyos-bore;
 
-  # Timezone/Locale
+  #Timezone/Locale
   time.timeZone = "Europe/Zagreb";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Systemd
+  #Systemd
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Login
+  #Login
   #---Service---
   services.getty.autologinUser = "marul";
 
-  # Networking
+  #Networking
   networking.hostName = "pnp_laptop_nvidia";
   networking.networkmanager.enable = true;
   networking.firewall.enable = true;
@@ -67,7 +67,12 @@
     openFirewall = true;
   };
 
-  # Audio
+  #Fonts
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+  ];
+
+  #Audio
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   #---Service---
@@ -78,20 +83,20 @@
     pulse.enable = true;
   };
 
-  # Bluetooth
+  #Bluetooth
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   #---Service---
   services.blueman.enable = true;
 
-  # TWM
+  #TWM
   programs.hyprland = {
     enable = true;
     withUWSM = true;
     xwayland.enable = true;
   };
 
-  # User configuration
+  #User configuration
   users.users.marul = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "audio" ];
@@ -102,7 +107,7 @@
     "Z /etc/nixos        0755   marul     users     -"
   ];
 
-  # System packages
+  #System packages
   programs.zsh.enable = true;
   environment.systemPackages = with pkgs; [
     vim

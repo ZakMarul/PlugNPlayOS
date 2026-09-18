@@ -48,7 +48,6 @@
     awww
     #---Misc---
     gamescope
-    nerd-fonts.jetbrains-mono
   ];
 
 
@@ -61,9 +60,6 @@
     SDL_VIDEODRIVER = "wayland";
     BROWSER = "firefox";
   };
-
-  # Font configuration
-  fonts.fontconfig.enable = true;
 
   # Hyprland configuration
   xdg.configFile."hypr" = {
