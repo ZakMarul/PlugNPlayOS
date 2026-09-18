@@ -99,9 +99,11 @@
   # Cursor configuration
   home.pointerCursor = {
     enable = true;
-    name = "Bibata-Modern-Classic";
-    package = pkgs.bibata-cursors;
-    size = 24;
+    name = "catppuccin-macchiato-dark-cursors";
+    package = pkgs.catppuccin-cursors.macchiatoDark;
+    size = 28;
+    gtk.enable = true;
+    x11.enable = true;
   };
 
   programs.home-manager.enable = true;

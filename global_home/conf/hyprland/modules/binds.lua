@@ -16,12 +16,12 @@ local web = "firefox"
 
 local mainMod = "SUPER"
 
-local closeWindowBind = hl.bind(mainMod .. " + slash", hl.dsp.window.close())
+local closeWindowBind = hl.bind(mainMod .. " + R", hl.dsp.window.close())
 
 
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + G", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(web))
 
 hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
