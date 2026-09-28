@@ -38,7 +38,7 @@
       alias ll="eza -l -g --icons --git --group-directories-first"
       alias la="eza -la -g --icons --git --group-directories-first"
       alias lt="eza --tree --level=2 --icons --group-directories-first"
-
+      alias fastfetch="fastfetch -c $HOME/.config/fastfetch/fastfetch.jsonc"
     '';
   };
 }
