@@ -1,18 +1,20 @@
-{ pkgs, config, inputs, ...}:
+{ pkgs, config, inputs, ... }:
 
 {
-  programs.noctalia-shell = {
-    imports = [
-        inputs.noctalia.homeModules.default
-      ];
+  # 1. Uvoz modula mora biti ovdje, na samom vrhu (izvan programa)
+  imports = [
+    inputs.noctalia.homeModules.default
+  ];
 
+  # 2. Ovdje idu postavke samog programa
+  programs.noctalia-shell = {
     enable = true;
+
     settings = {
-    theme = {
+      theme = {
         source = "builtin";
         builtin = "Catppuccin";
       };
     };
   };
-
 }
