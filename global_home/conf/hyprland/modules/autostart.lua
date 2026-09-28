@@ -8,6 +8,7 @@
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function ()
+    hl.exec_cmd("noctalia")
     hl.exec_cmd("awww-daemon &")
     hl.exec_cmd("sleep 0.5 && awww img ~/.config/wallpaper3.png")
-    end)
+end)

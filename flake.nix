@@ -46,7 +46,8 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.marul = import ./hosts/laptop_nvidia/home/home.nix;
+              sharedModules = [ noctalia.homeModules.default ];
+              users.marul = import ./hosts/desktop_AMD/home/home.nix;
               extraSpecialArgs = { inherit inputs; };
               backupFileExtension = "backup";
             };
@@ -65,7 +66,8 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.marul = import ./hosts/desktop_AMD/home/home.nix;
+              sharedModules = [ noctalia.homeModules.default ];
+              users.marul = import ./hosts/laptop_nvidia/home/home.nix;
               extraSpecialArgs = { inherit inputs; };
               backupFileExtension = "backup";
             };
