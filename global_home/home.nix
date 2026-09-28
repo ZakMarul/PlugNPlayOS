@@ -76,6 +76,11 @@
     recursive = true;
   };
 
+  # fastfetch
+  xdg.configFile."fastfetch" = {
+    source = ./conf/fastfetch;
+  };
+
   # Btop configuration
   xdg.configFile."btop/btop.conf" = {
     source = ./conf/btop/btop.conf;
