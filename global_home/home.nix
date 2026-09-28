@@ -11,6 +11,7 @@
   imports = [
     ./conf_nix/zsh.nix
     ./conf_nix/firefox.nix
+    ./conf_nix/noctalia.nix
   ];
 
   # Home user packages
@@ -41,6 +42,7 @@
     vesktop
     localsend
     vlc
+    blockbench
     obsidian
     #---Aesthetics---
     cmatrix
@@ -66,7 +68,7 @@
     source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/global_home/conf/hyprland";
     recursive = true;
   };
-
+  
   # Awww configuration
   xdg.configFile."wallpaper3.png".source = ./conf/wallpapers/wallpaper3.png;
 

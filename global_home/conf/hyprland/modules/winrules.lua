@@ -22,7 +22,7 @@
 --Floating decorations
 hl.window_rule({
     match = { float = true },
-    border_color = { colors = {"rgba(ed8796ff)", "rgba(eed49fff)"}, angle = 45 },
+    border_color = { colors = {"rgba(ed8796ff)", "rgba(eed49fff)"}, angle = 22.5 },
     rounding = 16,
     rounding_power = 2,
     border_size = 3,

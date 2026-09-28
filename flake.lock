@@ -114,6 +114,26 @@
         "type": "indirect"
       }
     },
+    "noctalia": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790624248,
+        "narHash": "sha256-EKcAGmFQAqbA43z+UEVzyZ3h3mgn5BQRtq8q3WFJhzI=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia",
+        "rev": "437239dfa8e202386b6b34c46d38cb7cf6f32d5a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia",
+        "type": "github"
+      }
+    },
     "obsidian-extensions": {
       "inputs": {
         "nixpkgs": [
@@ -141,6 +161,7 @@
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager_2",
         "nixpkgs": "nixpkgs",
+        "noctalia": "noctalia",
         "obsidian-extensions": "obsidian-extensions"
       }
     },

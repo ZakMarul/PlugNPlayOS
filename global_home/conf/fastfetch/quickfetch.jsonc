@@ -3,7 +3,7 @@
 
   "logo": {
     "type": "file",
-    "source": "~/.config/fastfetch/my_logo.txt",
+    "source": "~/.config/fastfetch/nix_logo.txt",
     "padding": {
       "right": 4
     }
@@ -31,6 +31,5 @@
     "disk",
     "battery",
     "break",
-    "colors"
   ]
 }

@@ -40,6 +40,9 @@
       alias lt="eza --tree --level=2 --icons --group-directories-first"
       alias fastfetch="fastfetch -c ${config.home.homeDirectory}/.config/fastfetch/fastfetch.jsonc"
       alias quickfetch="command fastfetch -c ${config.home.homeDirectory}/.config/fastfetch/quickfetch.jsonc"
+      alias c="clear"
+
+      quickfetch
     '';
   };
 }
