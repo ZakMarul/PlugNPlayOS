@@ -18,7 +18,7 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     #Noctalia flake
     noctalia = {
       url = "github:noctalia-dev/noctalia";
@@ -32,7 +32,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, chaotic, firefox-addons, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, chaotic, firefox-addons, noctalia, ... }@inputs: {
     nixosConfigurations = {
 
       #AMD Desktop sustav
