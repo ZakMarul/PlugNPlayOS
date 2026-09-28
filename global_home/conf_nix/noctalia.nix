@@ -7,8 +7,9 @@
     settings = {
       theme = {
         source = "builtin";
-        builtin = "Catppuccin";
+        builtin = "Catppuccin Mocha Mauve-Lavander";
       };
+      wallpaper.enabled = false;
     };
   };
 }
