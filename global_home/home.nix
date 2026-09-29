@@ -47,9 +47,9 @@
     #---Aesthetics---
     cmatrix
     fastfetch
-    awww
     #---Misc---
     gamescope
+    qbittorrent
   ];
 
 
@@ -69,8 +69,8 @@
     recursive = true;
   };
   
-  # Awww configuration
-  xdg.configFile."wallpaper3.png".source = ./conf/wallpapers/wallpaper3.png;
+  # Noctalia
+  xdg.configFile."wallpapers".source = ./conf/wallpapers;
 
   # Kitty configuration
   xdg.configFile."kitty" = {

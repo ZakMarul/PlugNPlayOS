@@ -5,9 +5,8 @@
 -- Set programs that you use
 local terminal    = "kitty"
 local fileManager = "nautilus"
-local menu = "pkill -x rofi || rofi -show drun"
+local menu = "noctalia msg "
 local web = "firefox"
-
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
@@ -21,7 +20,7 @@ local closeWindowBind = hl.bind(mainMod .. " + R", hl.dsp.window.close())
 
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu .. "panel-toggle launcher"))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(web))
 
 hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
