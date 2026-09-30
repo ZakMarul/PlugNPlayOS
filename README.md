@@ -1,5 +1,5 @@
 # PlugNPlayOS
-
+```
      _   ___    _
     +o\  \  \  / \
     \oo\  \  \/  /
@@ -14,7 +14,7 @@
     /so/\oo\  \  \
     \o/  \s+\  \_/
           ```
-
+```
 
 - Personal nixos configuration for my main laptop mashine.
 - General use desktop nixos configuration for one home user.
