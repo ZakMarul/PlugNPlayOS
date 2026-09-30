@@ -45,7 +45,6 @@
     vlc
     blockbench
     obsidian
-    sillytavern
     #---Aesthetics---
     cmatrix
     fastfetch

@@ -7,6 +7,9 @@
       ./hardware-configuration.nix
     ];
 
+  # Override
+     nixpkgs.config.permittedInsecurePackages = [ "electron-40.10.5" ];
+
   # Propriatary
   nixpkgs.config.allowUnfree = true;
 
@@ -25,6 +28,7 @@
     priority = 5;
   };
 
+  # Nvidia
   hardware.graphics = {
     enable = true;
     enable32Bit = true;

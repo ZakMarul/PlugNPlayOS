@@ -12,6 +12,22 @@
         mode = "dark";
         wallpaper_scheme = "m3-content";
       };
+      idle = {
+        pre_action_fade_seconds = 3.0;
+
+        behavior = {
+          lock = {
+            action = "lock";
+            timeout = 900;
+          };
+
+          screen-off = {
+            action = "screen_off";
+            timeout = 1800;
+          };
+        };
+      };
+      hooks.started = "noctalia msg session lock";
       wallpaper = {
         enabled = true;
         directory = "${config.xdg.configHome}/wallpapers";
