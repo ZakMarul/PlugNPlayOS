@@ -12,6 +12,8 @@
     ./conf_nix/zsh.nix
     ./conf_nix/firefox.nix
     ./conf_nix/noctalia.nix
+    ./conf_nix/qt.nix
+    ./conf_nix/gtk.nix
   ];
 
   # Home user packages
@@ -36,7 +38,6 @@
     onlyoffice-desktopeditors
     inkscape
     blender
-    steam
     zed-editor
     audacity
     vesktop
@@ -49,7 +50,6 @@
     cmatrix
     fastfetch
     #---Misc---
-    gamescope
     qbittorrent
   ];
 
@@ -69,7 +69,7 @@
     source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/global_home/conf/hyprland";
     recursive = true;
   };
-  
+
   # Noctalia
   xdg.configFile."wallpapers".source = ./conf/wallpapers;
 
