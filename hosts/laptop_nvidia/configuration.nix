@@ -7,9 +7,6 @@
       ./hardware-configuration.nix
     ];
 
-  # Override
-     nixpkgs.config.permittedInsecurePackages = [ "electron-40.10.5" ];
-
   # Propriatary
   nixpkgs.config.allowUnfree = true;
 
