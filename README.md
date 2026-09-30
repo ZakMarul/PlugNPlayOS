@@ -26,6 +26,9 @@
 - System type keyworks:
 ___
 -> pnp_nlt : Nvidia laptop systems
+
 -> pnp_amd : AMD desktop system
+
 -> pnp_wsl : WSL general system
+
 -> pnp_tpl : Thinkpad laptop system
