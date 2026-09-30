@@ -45,6 +45,7 @@
     vlc
     blockbench
     obsidian
+    (pkgs.callPackage ./conf_nix/cherry-studio.nix { })
     #---Aesthetics---
     cmatrix
     fastfetch
