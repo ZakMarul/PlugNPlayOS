@@ -17,7 +17,8 @@
           ```
 ```
 
-- Personal nixos configuration for all of my mashines.
+- Personal nixos configuration for all of my machines.
+- Holds packages and declerative configurations for my machines.
 - General use desktop nixos configuration for one home user.
 - Licenced under `MIT`. Feel free to modify, use and distribute.
 
