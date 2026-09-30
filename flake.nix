@@ -24,19 +24,13 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    #Obsidian flake
-    obsidian-extensions = {
-      url = "github:karaolidis/nix-obsidian-extensions";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { self, nixpkgs, home-manager, chaotic, firefox-addons, noctalia, ... }@inputs: {
     nixosConfigurations = {
 
       #AMD Desktop sustav
-      pnp_desktop_AMD = nixpkgs.lib.nixosSystem {
+      pnp_amd = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./hosts/desktop_AMD/configuration.nix
@@ -56,7 +50,7 @@
       };
 
       # NVIDIA Laptop sustav
-      pnp_laptop_nvidia = nixpkgs.lib.nixosSystem {
+      pnp_nlt = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./hosts/laptop_nvidia/configuration.nix
