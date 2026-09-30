@@ -11,7 +11,6 @@
 
     #Chaotic nyx flake
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    chaotic.inputs.nixpkgs.follows = "nixpkgs";
 
     #Firefox external flake
     firefox-addons = {

@@ -14,10 +14,10 @@
       };
       search = {
         force = true;
-        default = "DuckDuckGo";
-        privateDefault = "DuckDuckGo";
+        default = "ddg";
+        privateDefault = "ddg";
         engines = {
-          "DuckDuckGo" = {
+          "ddg" = {
             urls = [{ template = "https://duckduckgo.com/?q={searchTerms}"; }];
             definedAliases = [ "@ddg" ];
           };
@@ -25,8 +25,8 @@
       };
 
       extensions.packages = [
-        inputs.firefox-addons.packages.${pkgs.system}.ublock-origin
-        inputs.firefox-addons.packages.${pkgs.system}.vimium
+        inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}.ublock-origin
+        inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}.vimium
       ];
     };
   };
