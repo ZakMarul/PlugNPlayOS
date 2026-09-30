@@ -13,6 +13,7 @@
   \/ /sooo\─~.  .─~─`
     /so/\oo\  \  \
     \o/  \s+\  \_/
+          ```
 
 
 - Personal nixos configuration for my main laptop mashine.
