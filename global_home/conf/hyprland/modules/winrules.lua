@@ -19,10 +19,10 @@
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
---Floating decorations
+-- Floating decorations
 hl.window_rule({
     match = { float = true },
-    border_color = { colors = {"rgba(ed8796ff)", "rgba(eed49fff)"}, angle = 22.5 },
+    border_color = { colors = {"rgba(ed8796ff)", "rgba(eed49fff)"}, angle = 45 },
     rounding = 16,
     rounding_power = 2,
     border_size = 3,
@@ -31,7 +31,7 @@ hl.window_rule({
 --See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 --and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 
---Example window rules that are useful
+-- Example window rules that are useful
 local suppressMaximizeRule = hl.window_rule({
     --Ignore maximize requests from all apps. You'll probably like this.
     name  = "suppress-maximize-events",
@@ -40,7 +40,7 @@ local suppressMaximizeRule = hl.window_rule({
     suppress_event = "maximize",
 })
 
---suppressMaximizeRule:set_enabled(false)
+-- suppressMaximizeRule:set_enabled(false)
 hl.window_rule({
     -- Fix some dragging issues with XWayland
     name  = "fix-xwayland-drags",

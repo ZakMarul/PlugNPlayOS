@@ -13,11 +13,11 @@
         wallpaper_scheme = "m3-content";
       };
       wallpaper = {
-        enable = true;
-        directory = "${config.xdg.configHome}/wallpapers"; 
+        enabled = true;
+        directory = "${config.xdg.configHome}/wallpapers";
         default.path = "${config.xdg.configHome}/wallpapers/wallpaper3.png";
+        fill_mode = "crop";
       };
-      wallpaper.enabled = false;
       bar.default = {
         margin_ends = 0;
         margin_edge = 0;
