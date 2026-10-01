@@ -1,3 +1,4 @@
+-- Window rule
 -- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 -- "Smart gaps" / "No gaps when only"
 -- uncomment all if you wish to use that.
@@ -16,9 +17,6 @@
 --     rounding    = 0,
 -- })
 
---------------------------------
----- WINDOWS AND WORKSPACES ----
---------------------------------
 -- Floating decorations
 hl.window_rule({
     match = { float = true },

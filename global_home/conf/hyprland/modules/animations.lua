@@ -1,9 +1,7 @@
------------------------
------ ANIMATIONS ------
------------------------
+-- Animations
 
--- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
--- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
+-- Wiki link: https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
+
 hl.config({ animations = { enabled = true } })
 
 hl.curve("glide",  { type = "bezier", points = { {0.16, 0.84}, {0.24, 1} } })  -- soft ease-out

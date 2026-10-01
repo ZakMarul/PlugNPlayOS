@@ -1,4 +1,5 @@
--- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
+-- Window layouts
+-- Wiki link: https://wiki.hypr.land/Configuring/Layouts/
 hl.config({
     dwindle = {
         preserve_split = true, -- You probably want this
@@ -8,14 +9,12 @@ hl.config({
     },
 })
 
--- See https://wiki.hypr.land/Configuring/Layouts/Master-Layout/ for more
 hl.config({
     master = {
         new_status = "master",
     },
 })
 
--- See https://wiki.hypr.land/Configuring/Layouts/Scrolling-Layout/ for more
 hl.config({
     scrolling = {
         fullscreen_on_one_column = true,

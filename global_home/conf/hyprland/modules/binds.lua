@@ -1,18 +1,9 @@
----------------------
----- MY PROGRAMS ----
----------------------
+-- Binds
 
--- Set programs that you use
 local terminal    = "kitty"
 local fileManager = "nautilus"
 local menu = "noctalia msg "
 local web = "firefox"
----------------------
----- KEYBINDINGS ----
----------------------
-
--- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-
 local mainMod = "SUPER"
 
 local closeWindowBind = hl.bind(mainMod .. " + R", hl.dsp.window.close())
@@ -34,8 +25,7 @@ hl.bind(mainMod .. " + I", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + N", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + M", hl.dsp.window.pin())
 
--- Switch workspaces with mainMod + [0-9]
--- Move active window to a workspace with mainMod + SHIFT + [0-9]
+-- Workspaces
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
     hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
