@@ -1,8 +1,4 @@
--------------------------------
----------- MAIN FILE ----------
--------------------------------
-
-
+-- Main file
 
 require("modules.monitors")
 require("modules.binds")
@@ -16,12 +12,12 @@ require("modules.layout")
 require("modules.misc")
 require("modules.input")
 
---laptop_nvidia configuration
+-- Laptop_nvidia configuration
 if hostname == "pnp_laptop_nvidia" then
     require("env_nvidia")
 end
 
---desktop_amd configuration
+-- Desktop_amd configuration
 if hostname == "pnp_desktop_AMD" then
     require("monitors")
 elseif hostname == "pnp_laptop_nvidia" then
