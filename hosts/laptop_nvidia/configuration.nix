@@ -45,7 +45,7 @@
   };
 
   # Kernel
-  boot.kernelPackages = pkgs.linuxPackages_cachyos-bore;
+  boot.kernelPackages = pkgs.linuxPackages_cachyos;
 
   # Timezone/Locale
   time.timeZone = "Europe/Zagreb";

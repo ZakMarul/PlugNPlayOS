@@ -33,7 +33,8 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/desktop_AMD/configuration.nix
-          chaotic.nixosModules.default
+          chaotic.nixosModules.nyx-cache
+          chaotic.nixosModules.nyx-overlay
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -53,7 +54,8 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/laptop_nvidia/configuration.nix
-          chaotic.nixosModules.default
+          chaotic.nixosModules.nyx-cache
+          chaotic.nixosModules.nyx-overlay
           home-manager.nixosModules.home-manager
           {
             home-manager = {
