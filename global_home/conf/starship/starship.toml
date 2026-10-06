@@ -6,7 +6,7 @@ format = """
 [](base)\
 $os\
 $username\
-[](bg:peach fg:base)\
+[](bg:peach fg:surface0)\
 $directory\
 [](bg:yellow fg:peach)\
 $git_branch\
@@ -31,7 +31,7 @@ $line_break$character"""
 
 [os]
 disabled = false
-style = "bg:base fg:text"
+style = "bg:surface0 fg:text"
 format = "[ $symbol]($style)"
 
 [os.symbols]
@@ -59,8 +59,8 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
-style_user = "bg:base fg:text bold"
-style_root = "bg:base fg:text bold"
+style_user = "bg:surface0 fg:text bold"
+style_root = "bg:surface0 fg:text bold"
 format = '[ $user ]($style)'
 
 [directory]
