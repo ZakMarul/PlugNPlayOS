@@ -3,7 +3,7 @@
 palette = 'catppuccin_macchiato'
 
 format = """
-[](base)\
+[](surface0)\
 $os\
 $username\
 [](bg:peach fg:surface0)\
