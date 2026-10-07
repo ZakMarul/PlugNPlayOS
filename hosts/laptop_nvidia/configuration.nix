@@ -97,6 +97,15 @@
     xwayland.enable = true;
   };
 
+  # Portals
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
+
+  # Run Electron apps
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   # User configuration
   users.users.marul = {
     isNormalUser = true;

@@ -32,7 +32,10 @@
       bindkey "^[[A" up-line-or-beginning-search
       bindkey "^[[B" down-line-or-beginning-search
       bindkey -v
-      KEYTIMEOUT=1
+      bindkey -M viins '^?' backward-delete-char
+      bindkey -M viins '^H' backward-delete-char
+      bindkey -M viins '^W' backward-kill-word
+      bindkey -M viins '^U' backward-kill-line
       alias c="clear"
       alias ls="eza --group-directories-first"
       alias ll="eza -l -g --icons --git --group-directories-first"
