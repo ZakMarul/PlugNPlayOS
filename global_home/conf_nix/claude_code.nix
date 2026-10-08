@@ -4,7 +4,7 @@
     enable = true;
     package = inputs.claude-code.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
-    memory.source = ../claude/CLAUDE.md;
+    memory.source = ./claude/CLAUDE.md;
 
     settings = {
       model = "sonnet";
