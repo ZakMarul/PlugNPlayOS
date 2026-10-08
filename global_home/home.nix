@@ -14,6 +14,7 @@
     ./conf_nix/noctalia.nix
     ./conf_nix/qt.nix
     ./conf_nix/gtk.nix
+    ./conf_nix/claude_code.nix
   ];
 
   # Home user packages

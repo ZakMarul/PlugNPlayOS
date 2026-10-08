@@ -11,6 +11,12 @@
 
     #Chaotic nyx flake
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    
+    #Claude-code flake
+    claude-code = {
+      url = "github:sadjow/claude-code-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     #Firefox external flake
     firefox-addons = {
