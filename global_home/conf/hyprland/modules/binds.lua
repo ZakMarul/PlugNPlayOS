@@ -24,6 +24,8 @@ hl.bind(mainMod .. " + U", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + I", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + N", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + M", hl.dsp.window.pin())
+hl.bind(mainMod .. " + E", hl.dsp.window.fullscreen({ mode = "maximized" }))
+hl.bind(mainMod .. " + SHIFT + E", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 
 -- Workspaces
 for i = 1, 10 do
