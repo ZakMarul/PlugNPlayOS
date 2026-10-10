@@ -16,16 +16,7 @@
           set -g @catppuccin_window_status_style "rounded"
         '';
       }
-      {
-        plugin = vim-tmux-navigator;
-        extraConfig = ''
-          set -g @vim_navigator_mapping_left "M-h"
-          set -g @vim_navigator_mapping_down "M-j"
-          set -g @vim_navigator_mapping_up "M-k"
-          set -g @vim_navigator_mapping_right "M-l"
-          set -g @vim_navigator_mapping_prev ""
-        '';
-      }
+      vim-tmux-navigator
       {
         plugin = cpu;
         extraConfig = ''
@@ -48,6 +39,8 @@
       bind-key j select-pane -D
       bind-key k select-pane -U
       bind-key l select-pane -R
+
+      bind C-l send-keys 'C-l'
 
       set -g status-position top
       set -as terminal-features ",*:RGB"
