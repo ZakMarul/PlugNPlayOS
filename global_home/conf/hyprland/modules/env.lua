@@ -1,7 +1,7 @@
 -- Environment variables
 -- Wiki link: https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
--- Cursor size:
+-- Cursor size
 hl.env("XCURSOR_SIZE", "28")
 hl.env("HYPRCURSOR_SIZE", "28")
 

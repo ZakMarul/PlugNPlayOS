@@ -27,6 +27,7 @@
           };
         };
       };
+      notification.position = "top_right";
       hooks.started = "noctalia msg session lock";
       wallpaper = {
         enabled = true;
