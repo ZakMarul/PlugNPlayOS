@@ -81,6 +81,11 @@
     recursive = true;
   };
 
+  # Tmux configuration
+  xdg.configFile."tmux" = {
+    source = ./conf/tmux;
+  };
+
   # fastfetch
   xdg.configFile."fastfetch" = {
     source = ./conf/fastfetch;
