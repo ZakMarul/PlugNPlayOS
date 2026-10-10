@@ -17,6 +17,16 @@
         '';
       }
       {
+        plugin = vim-tmux-navigator;
+        extraConfig = ''
+          set -g @vim_navigator_mapping_left "M-h"
+          set -g @vim_navigator_mapping_down "M-j"
+          set -g @vim_navigator_mapping_up "M-k"
+          set -g @vim_navigator_mapping_right "M-l"
+          set -g @vim_navigator_mapping_prev ""
+        '';
+      }
+      {
         plugin = cpu;
         extraConfig = ''
           set -g status-right-length 100
@@ -39,12 +49,8 @@
       bind-key k select-pane -U
       bind-key l select-pane -R
 
-      bind -n M-h select-pane -L
-      bind -n M-j select-pane -D
-      bind -n M-k select-pane -U
-      bind -n M-l select-pane -R
-
       set -g status-position top
+      set -as terminal-features ",*:RGB"
     '';
   };
 }

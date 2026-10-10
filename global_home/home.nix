@@ -16,6 +16,7 @@
     ./conf_nix/gtk.nix
     ./conf_nix/claude_code.nix
     ./conf_nix/tmux.nix
+    ./conf_nix/nvim.nix
   ];
 
   # Home user packages
@@ -27,7 +28,6 @@
     eza
     wl-clipboard
     #---Core Pkgs---
-    neovim
     git
     fzf
     nautilus
@@ -60,7 +60,6 @@
   # Home user session variables
   home.sessionVariables = {
     TERMINAL = "kitty";
-    EDITOR = "nvim";
     PAGER = "less";
     MOZ_ENABLE_WAYLAND = "1";
     SDL_VIDEODRIVER = "wayland";
