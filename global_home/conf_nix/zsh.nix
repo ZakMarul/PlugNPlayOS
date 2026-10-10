@@ -24,6 +24,7 @@
     '';
 
     initContent = ''
+      KEYTIMEOUT=3
       # Pametno traženje kroz povijest sa strelicama gore/dolje
       autoload -U up-line-or-beginning-search
       autoload -U down-line-or-beginning-search
