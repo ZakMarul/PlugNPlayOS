@@ -27,15 +27,21 @@
       vim.opt.tabstop = 2
       vim.opt.softtabstop = 2
       vim.opt.shiftwidth = 2
+      -- Edit refresh
+      set -g focus-events on
 
       -- Općenito
       vim.opt.swapfile = false
       vim.opt.number = true
 
+      -- Resize ponasanje
+      vim.api.nvim_create_autocmd("VimResized", {
+        command = "wincmd =",
+      })
+
       vim.keymap.set("n", "<leader>h", "<cmd>nohlsearch<CR>")
 
-      -- vim-tmux-navigator na Alt
-      vim.g.tmux_navigator_no_mappings = 1
+      -- vim-tmux-navigator
       vim.keymap.set("n", "<M-h>", "<cmd>TmuxNavigateLeft<CR>")
       vim.keymap.set("n", "<M-j>", "<cmd>TmuxNavigateDown<CR>")
       vim.keymap.set("n", "<M-k>", "<cmd>TmuxNavigateUp<CR>")
