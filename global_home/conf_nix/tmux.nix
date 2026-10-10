@@ -6,6 +6,7 @@
     prefix = "C-s";
     mouse = true;
     terminal = "tmux-256color";
+    escapeTime = 30;
 
     plugins = with pkgs.tmuxPlugins; [
       {
@@ -37,6 +38,11 @@
       bind-key j select-pane -D
       bind-key k select-pane -U
       bind-key l select-pane -R
+
+      bind -n M-h select-pane -L
+      bind -n M-j select-pane -D
+      bind -n M-k select-pane -U
+      bind -n M-l select-pane -R
 
       set -g status-position top
     '';
