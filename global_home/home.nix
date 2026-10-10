@@ -15,6 +15,7 @@
     ./conf_nix/qt.nix
     ./conf_nix/gtk.nix
     ./conf_nix/claude_code.nix
+    ./conf_nix/tmux.nix
   ];
 
   # Home user packages
