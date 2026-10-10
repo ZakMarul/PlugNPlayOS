@@ -24,6 +24,7 @@
     btop
     htop
     eza
+    wl-clipboard
     #---Core Pkgs---
     neovim
     git

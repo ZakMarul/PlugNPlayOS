@@ -4,7 +4,7 @@
   # Imports
   imports = [
     ./hardware-configuration.nix
-    ../../global_conf/configuration.nix
+    ./general.nix
   ];
 
   # General
